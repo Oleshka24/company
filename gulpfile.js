@@ -5,7 +5,7 @@
  		browserSync = require('browser-sync');
 
  function css_style(done) {
- 	gulp.src('scss/main.scss')
+ 	gulp.src('assets/scss/main.scss')
  	 .pipe(sourcemaps.init())
  	 .pipe(rename({
  	 	suffix: '.min',
@@ -15,15 +15,15 @@
  	 	outputStyle: 'compressed'
  	 }))
  	 .pipe(sourcemaps.write('./'))
- 	 .pipe(gulp.dest('css/'))
+ 	 .pipe(gulp.dest('assets/css/'))
  	 .pipe(browserSync.stream());
 
  	done();
 }
 
 function watchFiles() {
-	gulp.watch('scss/*.scss', css_style);
-	gulp.watch('js/*.js', browserReload);
+	gulp.watch('assets/scss/*.scss', css_style);
+	gulp.watch('assets/js/*.js', browserReload);
 	gulp.watch('index.html', browserReload);
 }
 
