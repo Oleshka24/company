@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Company</title>
+
+	<!-- Main Files -->
+	<link rel="stylesheet" href="assets/css/main.min.css">
+	<script defer src="assets/js/main.js"></script>
+
+	<!-- jQuery -->
+	<script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>
+
+	<!-- OwlCarousel -->
+	<link rel="stylesheet" href="lib/OwlCarousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="lib/OwlCarousel/owl.theme.default.min.css">
+	<script src="lib/OwlCarousel/owl.carousel.min.js"></script>
+</head>
+<body>
+	<header class="header">
+		<div class="header__wrap">
+			<a href="#" class="header__logo">
+				<img src="assets/img/logo.svg" alt="Company">
+			</a>
+			<a href="tel:+380 97 977 97 97" class="header__phone">+380 97 977 97 97</a>
+			<nav class="header__nav">
+				<ul class="header__nav-list">
+					<li class="header__nav-item">
+						<a href="#" class="header__nav-link header__nav-link--current">Главная</a>
+					</li>
+					<li class="header__nav-item">
+						<a href="#" class="header__nav-link">Отзывы</a>
+					</li>
+					<li class="header__nav-item">
+						<a href="#" class="header__nav-link">Контакты</a>
+					</li>
+					<li class="header__nav-item">
+						<a href="#" class="header__nav-link">Пункт меню 1</a>
+					</li>
+					<li class="header__nav-item">
+						<a href="#" class="header__nav-link">Пункт меню 2</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<main>
+		<section class="banner">
+			<div class="banner__wrap">
+				<h1 class="banner__heading">Заголовок</h1>
+				<p class="banner__description">Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов,</p>
+			</div>
+			<button onclick="mute(this, 'banner__bg')" class="banner__button">вкл/выкл звук</button>
+			<video autoplay loop type="video/webm" src="assets/video/banner_bg.webm" class="banner__bg" id="banner__bg"></video>
+		</section>
+		<section class="reviews">
+			<div class="reviews__wrap">
+				<h2 class="reviews__heading">Отзывы</h2>
+				<div class="reviews__carousel">
+					<ul class="reviews__list">
+						<li class="reviews__item">
+							<img src="assets/img/reviews/review1.jpg" alt="Имя" class="reviews__item-photo">
+							<h3 class="reviews__item-name">Имя</h3>
+							<div class="reviews__item-description">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p></div>
+							<button class="reviews__item-btn">читать еще</button>
+						</li>
+						<li class="reviews__item">
+							<img src="assets/img/reviews/review2.jpg" alt="Иван Иванов" class="reviews__item-photo">
+							<h3 class="reviews__item-name">Иван Иванов</h3>
+							<div class="reviews__item-description">
+								<p>Свершилось! Посетив День открытых дверей могу с уверенностью сказать, что для меня это единственный садик надлежащего уровня у нас в городе, да ещё и в экологически чистом районе. Подход к детям, методика обучения, питание и форма времяпровождения моего ребёнка полностью удовлетворяют мои требования.</p>
+								<p>Свершилось! Посетив День открытых дверей могу с уверенностью сказать, что для меня это единственный садик надлежащего уровня у нас в городе, да ещё и в экологически чистом районе. Подход к детям, методика обучения, питание и форма времяпровождения моего ребёнка полностью удовлетворяют мои требования.</p></div>
+							<button class="reviews__item-btn">читать еще</button>
+						</li>
+						<li class="reviews__item">
+							<img src="assets/img/reviews/review3.png" alt="Имя" class="reviews__item-photo">
+							<h3 class="reviews__item-name">Имя</h3>
+							<div class="reviews__item-description">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p></div>
+							<button class="reviews__item-btn">читать еще</button>
+						</li>
+					</ul>
+					<menu class="reviews__nav">
+						<button class="reviews__dot"></button>
+						<button class="reviews__dot"></button>
+						<button class="reviews__dot"></button>
+					</menu>
+				</div>
+			</div>
+		</section>
+		<section class="contacts">
+			<div class="contacts__wrap">
+				<div class="contacts__block">
+					<form class="contacts__form" onsubmit="return validateForm();">
+						<h2 class="contacts__heading">Хочешь работать с нами?</h2>
+						<label for="name" class="contacts__label">Имя</label>
+						<input type="text" id="name" class="contacts__input contacts__input--current" placeholder="Ведите имя*">
+						<label for="phone" class="contacts__label">Номер телефона</label>
+						<input type="text" id="phone" class="contacts__input contacts__input--current" placeholder="Ведите номер*">
+						<label for="email" class="contacts__label">Почта</label>
+						<input type="text" id="email" class="contacts__input contacts__input--current" placeholder="Ведите e-mail*">
+						<label for="" class="contacts__label">Сообщение</label>
+						<textarea name="" id="" cols="30" rows="10" class="contacts__input contacts__textarea" placeholder="Текст"></textarea>
+						<input type="submit" class="contacts__submit" value="Отправить">
+					</form>
+					<div class="contacts__photo">
+						<img src="assets/img/contacts/preview.jpg" alt="Хочешь работать с нами?">
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="footer">
+		<div class="footer__wrap">
+			<span class="footer__copyright">©company 2018</span>
+			<ul class="footer__socials">
+				<li>
+					<a href="https://www.facebook.com/ideadigitalagency/" target="_blank" class="footer__link footer__link-facebook"></a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com/ideadigitalagency/" target="_blank" class="footer__link footer__link-instagram"></a>
+				</li>
+			</ul>
+			<span class="footer__developers">MADE BY: <strong>IDEADIGITAL.Agency</strong></span>
+		</div>
+	</footer>
+</body>
+</html>
