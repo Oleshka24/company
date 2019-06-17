@@ -1,0 +1,80 @@
+.header__wrap, 
+.banner__wrap, 
+.reviews__wrap, 
+.contacts__wrap, 
+.footer__wrap {
+	width: 100%;
+	max-width: 54rem;
+}
+
+.header {
+	&__nav {
+		&-btn {
+			margin-left: 1.4rem;
+		}
+	}
+}
+
+.banner {
+	&__heading {
+		font-size: 4rem;
+	}
+
+	&__description {
+		font-size: 1.6rem;
+		max-width: 32rem;
+	}
+
+	&__button {
+		height: 4.7rem;
+		top: auto;
+		bottom: 7.2rem;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+.reviews {
+	&__heading {
+		margin-bottom: 0;
+	}
+
+	&__item {
+		width: calc(100% - 8.6rem);
+		padding-left: 2.8rem;
+		padding-right: 2.8rem;
+		margin: 4.3rem;
+
+		&-photo {
+			width: 14rem;
+		}
+	}
+
+	&__nav {
+		margin-top: 0;
+	}
+}
+
+.contacts {
+	&__form {
+		width: 100%;
+		padding: 4rem 1.3rem 6.7rem;
+	}
+
+	&__heading {
+		font-size: 3.5rem;
+		font-weight: 900;
+	}
+}
+
+.footer {
+	&__socials {
+		margin: auto;
+		display: none;
+
+		&--mobile {
+			display: flex;
+			transform: translateY(-15px);
+		}
+	}
+}

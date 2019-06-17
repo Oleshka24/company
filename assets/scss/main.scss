@@ -253,7 +253,7 @@ a {
 
 		&-photo {
 			width: 20rem;
-			height: 20rem;
+			max-width: 100%;
 			position: relative;
 			left: 50%;
 			transform: translateX(-50%);
@@ -311,7 +311,8 @@ a {
 		border: .1rem solid $textLight;	
 		cursor: pointer;
 
-		&--active {
+		&--active,
+		&.active {
 			width: 3rem;
 			height: 3rem;
 			border-width: 0;
@@ -433,6 +434,14 @@ a {
 			display: block;
 			border-top: .1rem solid $main;
 		}
+
+		&--mobile {
+			min-height: 0;
+
+			&::before {
+				display: none;
+			}
+		}
 	}
 
 	&__copyright {
@@ -443,6 +452,10 @@ a {
 
 	&__socials {
 		display: flex;
+
+		&--mobile {
+			display: none;
+		}
 	}
 
 	&__link {
@@ -487,4 +500,10 @@ a {
 
 @media(max-width: 992px) {
 	@import 'tablet';
+}
+
+// Mobile
+
+@media(max-width: 768px) {
+	@import 'mobile';
 }
