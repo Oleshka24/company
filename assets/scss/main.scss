@@ -12,7 +12,7 @@
 
 html {
 	font-size: 10px;
-	font-family: ST-Compact-Display;
+	font-family: SF-Compact-Display;
 }
 
 html,
@@ -46,6 +46,7 @@ a {
 	background-color: $white + fffdb;
 	color: $main;
 	z-index: 100;
+	font-weight: 200;
 
 	&__wrap {
 		width: 117rem;
@@ -57,6 +58,10 @@ a {
 	}
 
 	&__logo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
 		img {
 			width: 7.2rem;
 			height: 7.2rem;
@@ -87,8 +92,14 @@ a {
 				font-weight: bold;
 			}
 		}
+
+		&-btn {
+			display: none;
+		}
 	}
 }
+
+// Content
 
 .banner {
 	min-height: 100vh;
@@ -98,6 +109,7 @@ a {
 	align-items: center;
 	position: relative;
 	font-size: 2.4rem;
+	font-weight: 200;
 	color: $white;
 	text-align: center;
 
@@ -205,6 +217,7 @@ a {
 			padding-top: 7rem;
 			overflow: hidden;
 			cursor: pointer;
+			box-shadow: 0 0 10px 30px #6204F6;
 		}
 
 		&--right {
@@ -227,6 +240,15 @@ a {
 		&--right > &-btn {
 			color: transparent;	
 			pointer-events: none;
+		}
+
+		&--right &-photo,
+		&--right &-name,
+		&--right &-description,
+		&--left &-photo,
+		&--left &-name,
+		&--left &-description {
+			filter: blur(.4rem);
 		}
 
 		&-photo {
@@ -264,7 +286,7 @@ a {
 			border-width: 0;
 			text-transform: uppercase;
 			color: $main;
-			font-weight: bold;
+			font-weight: 900;
 			background-color: transparent;
 			cursor: pointer;
 		}
@@ -318,7 +340,7 @@ a {
 
 	&__form {
 		width: 60rem;
-		padding: 5.7rem 3.7rem 7.8rem 7.9rem;
+		padding: 5.7rem 3.7rem 7.8rem 7.1rem;
 		display: flex;
 		flex-direction: column;
 		color: $textDark;
@@ -329,7 +351,7 @@ a {
 		font-size: 4rem;
 		line-height: 4.8rem;
 		color: $headingDark;
-		font-weight: bold;
+		font-weight: 800;
 	}
 
 	&__label {
@@ -385,12 +407,13 @@ a {
 
 		img {
 			width: 100%;
-			position: absolute;
-			left: 0;
-			top: 0;
+			height: 100%;
+			object-fit: cover;
 		}
 	}
 }
+
+// Footer
 
 .footer {
 	&__wrap {
@@ -448,4 +471,20 @@ a {
 			font-size: 1.2rem;
 		}
 	}
+}
+
+@media(max-width: 1200px) {
+	.header__wrap, 
+	.banner__wrap, 
+	.reviews__wrap, 
+	.contacts__wrap, 
+	.footer__wrap {
+		width: 96rem;
+	}
+}
+
+// Tablet
+
+@media(max-width: 992px) {
+	@import 'tablet';
 }

@@ -1,13 +1,34 @@
 @font-face {
 	src: url('../fonts/SF Compact Display/SF Compact Display-Thin.otf');
-	font-family: ST-Compact-Display;
+	font-family: SF-Compact-Display;
 	font-style: normal;
-	font-weight: normal;
+	font-weight: 200;
 }
 
 @font-face {
 	src: url('../fonts/SF Compact Display/SF Compact Display-Medium.otf');
-	font-family: ST-Compact-Display;
+	font-family: SF-Compact-Display;
 	font-style: normal;
-	font-weight: bold;
+	font-weight: 500;
+}
+
+@font-face {
+	src: url('../fonts/SF Compact Display/SF Compact Display-Bold.otf');
+	font-family: SF-Compact-Display;
+	font-style: normal;
+	font-weight: 700;
+}
+
+@font-face {
+	src: url('../fonts/SF Compact Display/SF Compact Display-Heavy.otf');
+	font-family: SF-Compact-Display;
+	font-style: normal;
+	font-weight: 800;
+}
+
+@font-face {
+	src: url('../fonts/SF Compact Display/SF Compact Display-Black.otf');
+	font-family: SF-Compact-Display;
+	font-style: normal;
+	font-weight: 900;
 }

@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Company</title>
 
 	<!-- Main Files -->
@@ -41,6 +42,9 @@
 						<a href="#" class="header__nav-link">Пункт меню 2</a>
 					</li>
 				</ul>
+				<button class="header__nav-btn">
+					<span></span>
+				</button>
 			</nav>
 		</div>
 	</header>
@@ -99,9 +103,9 @@
 						<label for="name" class="contacts__label">Имя</label>
 						<input type="text" id="name" class="contacts__input contacts__input--current" placeholder="Ведите имя*">
 						<label for="phone" class="contacts__label">Номер телефона</label>
-						<input type="text" id="phone" class="contacts__input contacts__input--current" placeholder="Ведите номер*">
+						<input type="tel" id="phone" class="contacts__input contacts__input--current" placeholder="Ведите номер*">
 						<label for="email" class="contacts__label">Почта</label>
-						<input type="text" id="email" class="contacts__input contacts__input--current" placeholder="Ведите e-mail*">
+						<input type="email" id="email" class="contacts__input contacts__input--current" placeholder="Ведите e-mail*">
 						<label for="" class="contacts__label">Сообщение</label>
 						<textarea name="" id="" cols="30" rows="10" class="contacts__input contacts__textarea" placeholder="Текст"></textarea>
 						<input type="submit" class="contacts__submit" value="Отправить">
